@@ -1,0 +1,230 @@
+.payment-hotel {
+    margin: 20px auto;
+    width: 1200px;
+}
+
+.payment-hotel-container {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    gap: 20px;
+}
+
+.payment-hotel-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-hotel-hotel {
+    display: flex;  
+    gap: 15px;
+    border-bottom: 1px solid #6a6868;
+}
+
+.payment-hotel-hotel img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.payment-hotel-hotel-info h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.payment-hotel-hotel-info p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.payment-hotel-checkin {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f8f8;
+    border-radius: 5px;
+}
+
+.payment-hotel-checkin div {
+    flex: 1;
+    text-align: center;
+}
+
+.payment-hotel-checkin div strong {
+    display: block;
+    font-size: 16px;
+}
+
+.payment-hotel-room {
+    margin-top: 15px;
+}
+
+.payment-hotel-room p {
+    margin: 10px 0;
+}
+
+/* Chia cột cho chuyến bay và giá */
+.payment-hotel-sidebar {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+
+.payment-hotel-flight strong {
+    font-size: 16px;
+}
+
+.payment-hotel-flight-time {
+    color: red;
+    font-weight: bold;
+}
+
+.payment-hotel-price h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.payment-hotel-price-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.payment-hotel-price-table td {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.payment-hotel-total {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.payment-hotel-contact {
+    width: 59%;
+    margin-top: 20px;
+    padding: 25px;
+}
+
+.payment-hotel-contact h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.payment-hotel-login {
+    background: #e6f2ff;
+    color: #00B6F3;
+    padding: 8px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.payment-hotel-form input {
+    width: calc(50% - 3px);
+    padding: 8px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.payment-hotel-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.payment-hotel-checkbox input {
+    margin-right: 5px;
+}
+
+/* Ẩn thông tin khách nhận phòng ban đầu */
+.payment-hotel-guest-info {
+    display: none;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.payment-hotel-guest-info h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.payment-hotel-guest-info input {
+    width: 100%;
+    padding: 8px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.payment-hotel-method {
+    width: 59%;
+    margin-top: 20px;
+    padding: 25px;
+}
+
+.payment-hotel-method h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.payment-hotel-note {
+    font-size: 14px;
+    color: green;
+    margin-bottom: 10px;
+}
+
+.payment-hotel-note span {
+    font-weight: bold;
+}
+
+.payment-hotel-option {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.payment-hotel-option input {
+    margin-right: 8px;
+}
+
+.payment-hotel-button {
+    width: 120px;
+    background: #ff4081;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    float: right;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.payment-hotel-button:hover {
+    background: #e03572;
+}
+
+.payment-hotel-terms {
+    font-size: 12px;
+    text-align: end;
+    color: #ff4081;
+    margin-top: 60px;
+}
+
+.payment-hotel-terms a {
+    color: #ff4081;
+    text-decoration: underline;
+}

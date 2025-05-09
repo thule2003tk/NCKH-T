@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khách sạn tiết kiệm | Voyage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white border-b shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+      <div class="text-pink-500 font-bold text-xl">Voyage</div>
+      <div class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="hotel.html" class="text-gray-800 hover:text-pink-500">Khách sạn</a>
+        <a href="#" class="text-gray-800 hover:text-pink-500">Vé máy bay</a>
+        <a href="#" class="text-gray-800 hover:text-pink-500">Biệt thự, Homestay</a>
+        <a href="hotelsaving.html" class="text-pink-500 font-bold border-b-2 border-pink-500">Khách sạn tiết kiệm</a>
+        <div class="flex items-center space-x-2">
+          <button class="text-sm border px-4 py-1 rounded text-pink-500 border-pink-500 hover:bg-pink-50">Đăng nhập</button>
+          <button class="text-sm bg-pink-500 text-white px-4 py-1 rounded hover:bg-pink-600">Đăng ký</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Thanh tìm kiếm -->
+  <section class="bg-gray-50 py-6">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-5 gap-4">
+      <input type="text" id="searchInput" placeholder="Tìm khách sạn hoặc địa điểm" class="border p-3 rounded col-span-1" />
+      <input type="text" placeholder="Địa điểm" class="border p-3 rounded" />
+      <input type="date" class="border p-3 rounded" />
+      <input type="date" class="border p-3 rounded" />
+      <input type="text" placeholder="1 phòng, 2 khách" class="border p-3 rounded" />
+    </div>
+  </section>
+
+  <!-- Bộ lọc -->
+  <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap gap-2 text-sm">
+    <button class="px-4 py-2 bg-pink-100 text-pink-600 rounded">Giá thấp đến cao</button>
+    <button class="px-4 py-2 bg-pink-100 text-pink-600 rounded">Giá cao đến thấp</button>
+    <button class="px-4 py-2 bg-pink-100 text-pink-600 rounded">Đánh giá tốt nhất</button>
+    <button class="px-4 py-2 bg-pink-100 text-pink-600 rounded">Có khuyến mãi</button>
+    <button class="px-4 py-2 bg-pink-100 text-pink-600 rounded">Miễn phí hủy</button>
+    <button class="px-4 py-2 bg-pink-100 text-pink-600 rounded">Có ăn sáng</button>
+  </div>
+
+  <!-- Danh sách khách sạn -->
+  <section id="hotelList" class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6 pb-10">
+    <!-- Một thẻ khách sạn -->
+    <div class="hotel-item border rounded overflow-hidden shadow-sm" data-name="InterContinental Danang Sun Peninsula Resort- Đà Nẵng">
+      <img src="image/danangks.jpg" alt="Đà Nẵng" class="w-full h-48 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">InterContinental Danang Sun Peninsula Resort - Đà Nẵng</h3>
+        <p class="text-sm text-gray-500">⭐ 3.5 | 120 đánh giá</p>
+        <p class="text-pink-600 font-bold mt-2">400.000đ/đêm</p>
+        <button class="mt-2 w-full bg-pink-500 text-white py-2 rounded hover:bg-pink-600">Đặt ngay</button>
+      </div>
+    </div>
+
+    <div class="border rounded overflow-hidden shadow-sm" data-name="InterContinental Nha Trang - Nha Trang">
+      <img src="image/nhatrang.jpg" alt="hotel" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">InterContinental Nha Trang - Nha Trang</h3>
+        <p class="text-sm text-gray-500">⭐ 4.0 | 150 đánh giá</p>
+        <p class="text-pink-600 font-bold mt-2">500.000đ/đêm</p>
+        <button class="mt-2 w-full bg-pink-500 text-white py-2 rounded">Đặt ngay</button>
+      </div>
+    </div>
+
+    <div class="border rounded overflow-hidden shadow-sm" data-name="Equatorial Ho Chi Minh City- Hồ Chí Minh">
+      <img src="image/hochiminh.jpg" alt="hotel" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">Equatorial Ho Chi Minh City- Hồ Chí Minh</h3>
+        <p class="text-sm text-gray-500">⭐ 4.5 | 200 đánh giá</p>
+        <p class="text-pink-600 font-bold mt-2">600.000đ/đêm</p>
+        <button class="mt-2 w-full bg-pink-500 text-white py-2 rounded">Đặt ngay</button>
+      </div>
+    </div>
+
+    <div class="border rounded overflow-hidden shadow-sm" data-name="Wyn Phu Quoc Hotel- Phú Quốc">
+      <img src="image/phuquocks.jpg" alt="hotel" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold"> Wyn Phu Quoc Hotel- Phú Quốc</h3>
+        <p class="text-sm text-gray-500">⭐ 4.7 | 180 đánh giá</p>
+        <p class="text-pink-600 font-bold mt-2">750.000đ/đêm</p>
+        <button class="mt-2 w-full bg-pink-500 text-white py-2 rounded">Đặt ngay</button>
+      </div>
+    </div>
+
+    <div class="border rounded overflow-hidden shadow-sm" data-name="Hilton Hanoi Opera- Hà Nội">
+      <img src="image/hanoiks.jpg" alt="hotel" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">Hilton Hanoi Opera- Hà Nội</h3>
+        <p class="text-sm text-gray-500">⭐ 3.9 | 95 đánh giá</p>
+        <p class="text-pink-600 font-bold mt-2">450.000đ/đêm</p>
+        <button class="mt-2 w-full bg-pink-500 text-white py-2 rounded">Đặt ngay</button>
+      </div>
+    </div>
+
+    <div class="border rounded overflow-hidden shadow-sm" data-name="Wyndham Legend Hạ Long- Hạ Long">
+      <img src="image/halongks.jpg" alt="hotel" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">Wyndham Legend Hạ Long- Hạ Long</h3>
+        <p class="text-sm text-gray-500">⭐ 4.2 | 160 đánh giá</p>
+        <p class="text-pink-600 font-bold mt-2">520.000đ/đêm</p>
+        <button class="mt-2 w-full bg-pink-500 text-white py-2 rounded">Đặt ngay</button>
+      </div>
+    </div>
+
+    <div class="border rounded overflow-hidden shadow-sm" data-name="Hoàng Sơn Peace Hotel- Ninh Bình">
+      <img src="image/ninhbinhks.jpg" alt="hotel" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">Hoàng Sơn Peace Hotel- Ninh Bình</h3>
+        <p class="text-sm text-gray-500">⭐ 4.1 | 130 đánh giá</p>
+        <p class="text-pink-600 font-bold mt-2">400.000đ/đêm</p>
+        <button class="mt-2 w-full bg-pink-500 text-white py-2 rounded">Đặt ngay</button>
+      </div>
+    </div>
+
+    <div class="border rounded overflow-hidden shadow-sm" data-name="Khách sạn trên đồi- Sapa">
+      <img src="image/sa-pa.jpg" alt="hotel" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">Khách sạn trên đồi- Sapa</h3>
+        <p class="text-sm text-gray-500">⭐ 4.3 | 110 đánh giá</p>
+        <p class="text-pink-600 font-bold mt-2">650.000đ/đêm</p>
+        <button class="mt-2 w-full bg-pink-500 text-white py-2 rounded">Đặt ngay</button>
+      </div>
+    </div>
+
+    <div class="border rounded overflow-hidden shadow-sm" data-name="Becamex Hotel New City - Bình Dương">
+      <img src="image/binhduongks.jpg" alt="hotel" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">Becamex Hotel New City - Bình Dương</h3>
+        <p class="text-sm text-gray-500">⭐ 3.8 | 80 đánh giá</p>
+        <p class="text-pink-600 font-bold mt-2">420.000đ/đêm</p>
+        <button class="mt-2 w-full bg-pink-500 text-white py-2 rounded">Đặt ngay</button>
+      </div>
+    </div>
+  </section>
+  <script>
+  // Lọc theo giá thấp đến cao
+  document.getElementById('priceLowToHigh').addEventListener('click', function () {
+    const hotels = Array.from(document.querySelectorAll('.hotel-item'));
+    hotels.sort((a, b) => {
+      return parseInt(a.getAttribute('data-price')) - parseInt(b.getAttribute('data-price'));
+    });
+    const hotelList = document.getElementById('hotelList');
+    hotelList.innerHTML = '';
+    hotels.forEach(hotel => hotelList.appendChild(hotel));
+  });
+
+  // Lọc theo giá cao đến thấp
+  document.getElementById('priceHighToLow').addEventListener('click', function () {
+    const hotels = Array.from(document.querySelectorAll('.hotel-item'));
+    hotels.sort((a, b) => {
+      return parseInt(b.getAttribute('data-price')) - parseInt(a.getAttribute('data-price'));
+    });
+    const hotelList = document.getElementById('hotelList');
+    hotelList.innerHTML = '';
+    hotels.forEach(hotel => hotelList.appendChild(hotel));
+  });
+
+  // Lọc theo đánh giá tốt nhất
+  document.getElementById('bestRated').addEventListener('click', function () {
+    const hotels = Array.from(document.querySelectorAll('.hotel-item'));
+    hotels.sort((a, b) => {
+      return parseFloat(b.getAttribute('data-rating')) - parseFloat(a.getAttribute('data-rating'));
+    });
+    const hotelList = document.getElementById('hotelList');
+    hotelList.innerHTML = '';
+    hotels.forEach(hotel => hotelList.appendChild(hotel));
+  });
+
+  // Lọc có khuyến mãi
+  document.getElementById('withPromo').addEventListener('click', function () {
+    const hotels = Array.from(document.querySelectorAll('.hotel-item'));
+    const filteredHotels = hotels.filter(hotel => hotel.getAttribute('data-promo') === 'true');
+    const hotelList = document.getElementById('hotelList');
+    hotelList.innerHTML = '';
+    filteredHotels.forEach(hotel => hotelList.appendChild(hotel));
+  });
+
+  // Lọc miễn phí hủy
+  document.getElementById('freeCancel').addEventListener('click', function () {
+    const hotels = Array.from(document.querySelectorAll('.hotel-item'));
+    const filteredHotels = hotels.filter(hotel => hotel.getAttribute('data-free-cancel') === 'true');
+    const hotelList = document.getElementById('hotelList');
+    hotelList.innerHTML = '';
+    filteredHotels.forEach(hotel => hotelList.appendChild(hotel));
+  });
+
+  // Lọc có ăn sáng
+  document.getElementById('withBreakfast').addEventListener('click', function () {
+    const hotels = Array.from(document.querySelectorAll('.hotel-item'));
+    const filteredHotels = hotels.filter(hotel => hotel.getAttribute('data-breakfast') === 'true');
+    const hotelList = document.getElementById('hotelList');
+    hotelList.innerHTML = '';
+    filteredHotels.forEach(hotel => hotelList.appendChild(hotel));
+  });
+</script>
+    <!-- Lý do chọn Voyage -->
+  <section class="bg-pink-50 py-10">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold text-pink-500 mb-4">Tại sao chọn Voyage?</h2>
+      <p class="text-lg text-gray-700">Chúng tôi mang đến cho bạn các lựa chọn khách sạn tiết kiệm nhưng chất lượng tuyệt vời, giúp bạn có một chuyến đi đáng nhớ mà không lo về chi phí.</p>
+    </div>
+  </section>
+  <!-- Promo Section -->
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <div class="bg-pink-50 border border-pink-300 p-4 rounded mb-6">
+      <p class="text-sm text-gray-500 mb-1">Nhập mã <span class="font-bold text-pink-600">QZBIT</span></p>
+      <h3 class="font-bold text-lg">Giảm 8% đơn đặt phòng khách sạn</h3>
+      <p class="text-xs text-gray-500 mt-1">Hạn sử dụng: 01/01 - 31/01 | Nhập mã khi thanh toán</p>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="bg-gray-100 py-10">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold mb-4">Tại sao nên đặt tại Voyage?</h2>
+      <div class="grid md:grid-cols-4 gap-4 text-sm text-left">
+        <div>
+          <h4 class="font-semibold mb-1">✅ Giá tốt nhất</h4>
+          <p>So sánh và đảm bảo bạn luôn có mức giá hợp lý nhất.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-1">🔄 Hủy miễn phí</h4>
+          <p>Nhiều khách sạn hỗ trợ hủy linh hoạt không mất phí.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-1">📞 Hỗ trợ 24/7</h4>
+          <p>Đội ngũ hỗ trợ khách hàng luôn sẵn sàng.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-1">🔒 Thanh toán an toàn</h4>
+          <p>Hệ thống thanh toán bảo mật và tiện lợi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Script -->
+  <script>
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const keyword = this.value.toLowerCase();
+      const hotels = document.querySelectorAll('[data-name]');
+      hotels.forEach(hotel => {
+        const name = hotel.getAttribute('data-name').toLowerCase();
+        hotel.style.display = name.includes(keyword) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
